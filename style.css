@@ -6,11 +6,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+body{
+  background-color: #ffffff;
+}
 
 /* Style pour le header et la navbar */
 #navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #37a8ca;
@@ -44,7 +47,6 @@
   transition: color 0.3s ease;
 }
 
-/* Changer la couleur des liens au survol */
 .nav-link:hover {
   color: #000000;
 }
@@ -64,7 +66,6 @@
   transition: color 0.3s ease;
 }
 
-/* Changer la couleur des icônes au survol */
 .link-icon:hover {
   color: #000000;
 }
@@ -75,16 +76,26 @@
   background-color: #37a8ca;
   color: rgb(0, 0, 0);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   position: relative;
-  padding: 0 2rem;
-  flex-wrap: wrap; /* Allow content to stack on smaller screens */
+  flex-wrap: wrap; 
+  gap: 5rem;
+}
+
+.hero-img {
+  display: block;
+  width: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content{
+  display: block;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
 
@@ -93,19 +104,9 @@
   margin-bottom: 2rem;
 }
 
-.hero-img img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover; /* Change to cover for better image scaling */
-}
-
 .hero form {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   position: relative;
-  width: 100%;
-  margin-top: 1.5rem;
 }
 
 .hero input {
@@ -113,25 +114,24 @@
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  width: 100%;
-  padding-right: 120px; /* Ensure enough space for the button */
-  position: relative;
-  box-sizing: border-box; /* Include padding in total width calculation */
+  padding-right: 155px; 
+  box-sizing: border-box; 
 }
 
 .hero button {
   position: absolute;
-  right: 122px;
+  right: 120px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 5px;
   font-size: 1rem;
-  background-color: #37a8ca;
+  background-color: #2087a7;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 30%;
+  padding: 5px;
 }
 
 .hero button:hover {
@@ -140,16 +140,21 @@
 
 
 /* Styles de la section des cards */
+.features-content{
+  text-align: center;
+  padding: 2rem;
+}
 .cards-section {
   display: flex;
-  justify-content: space-around;
   padding: 3rem 0;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
   width: 300px;
-  background-color: white;
+  background-color: #37a8ca;
   padding: 2rem;
   text-align: center;
   border-radius: 8px;
@@ -158,25 +163,54 @@
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Effet de translation des cartes */
+  transform: translateY(-10px); 
 }
 
 .card i {
   font-size: 2.5rem;
-  color: #f76c6c;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .card p {
   font-size: 1rem;
   color: #555;
+  color: white;
 }
 
+/* Styles de la equipe section cards */
+
+.equipe-cards{
+  text-align: center;
+  padding: 2rem;
+}
+.container-equipe{
+  display: flex;
+  padding: 3rem 0;
+  background-color: #ffffff;
+  gap: 20px;
+  justify-content: center;
+}
+.eq-card{
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.eq-card:hover{
+  transform: translateY(-10px); 
+}
+.eq-card img{
+  border-radius: 100%;
+  filter: grayscale(1);
+  width: 100%;
+}
 /* Mobile responsive */
 @media (max-width: 768px) {
 
@@ -202,28 +236,28 @@
   }
 
   .hero {
-    flex-direction: column; /* Stack content vertically on small screens */
-    text-align: center; /* Center align text */
+    flex-direction: column; 
+    text-align: center; 
   }
 
   .hero h1 {
-    font-size: 2.5rem; /* Smaller heading */
+    font-size: 2.5rem; 
   }
 
   .hero p {
-    font-size: 1rem; /* Smaller paragraph text */
+    font-size: 1rem; 
   }
 
   .hero input {
-    padding-right: 80px; /* Less space for the button in small screens */
+    padding-right: 80px; 
   }
 
   .hero button {
-    right: 10px; /* Button is well-placed even in small screens */
+    right: 10px; 
   }
 
   .hero-img {
-    margin-top: 2rem; /* Add margin for image in small screens */
+    margin-top: 2rem;
   }
 }
 
