@@ -139,7 +139,7 @@ body{
 }
 
 
-/* Styles de la section des cards */
+/* Styles de la section features des cards */
 .features-content{
   text-align: center;
   padding: 2rem;
@@ -211,6 +211,164 @@ body{
   filter: grayscale(1);
   width: 100%;
 }
+
+/* Styles de la section parallax */
+.parallax{
+  background-image: url("/img_landingPage/parallax.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  justify-items: center;
+  position: relative;
+  color: white;
+  
+}
+
+.parallax h2{
+  position: absolute;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-30%, -30%);
+}
+.parallax p{
+  position: absolute;
+  font-size: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.parallax button{
+  position: absolute;
+  font-size: 1rem;
+  border:#ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  top: 70%;
+  left: 70%;
+  transform: translate(-70%, -70%);
+}
+
+/* Styles de la section blog */
+.blog {
+  display: flex;
+  padding: 3rem 0;
+  background-color: #ffffff;
+  gap: 20px;
+  justify-content: center;
+}
+
+.blog-card {
+  width: 300px;
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px); 
+}
+
+.blog-card img {
+  border-radius: 2%;
+  width: 100%;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.blog-card p {
+  font-size: 1rem;
+  color: rgb(104, 100, 100);
+}
+
+/* Style de la section pricing */
+.pricing {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap; 
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.price-content {
+  display: block;
+  max-width: 600px;
+}
+
+.price-content h4 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.pricing-item {
+  margin-bottom: 2rem;
+}
+
+.pricing-item h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.pricing-item .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.price-content button {
+  font-size: 1rem;
+  background-color: #4381dd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px 20px;
+}
+
+.price-content button:hover {
+  background-color: #3a71b4;
+  transform: translateY(-2px);
+}
+
+.price-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
 /* Mobile responsive */
 @media (max-width: 768px) {
 
