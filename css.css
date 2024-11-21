@@ -1,0 +1,490 @@
+/* Variables CSS Globales */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Typographie */
+  body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar nav ul li {
+    margin-left: 2rem;
+  }
+  
+  .navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+  }
+  
+  .navbar nav ul li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Pour compenser la navbar fixe */
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-form input[type="email"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+    font-size: 1rem;
+  }
+  
+  .subscribe-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #fff;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: transform var(--transition-speed), background var(--transition-speed);
+  }
+  
+  .subscribe-btn:hover {
+    transform: scale(1.05);
+    background: var(--secondary-color);
+    color: #fff;
+  }
+  
+  /* Effet sur Navbar et Bouton lors du survol */
+  .navbar nav ul li a:hover,
+  .subscribe-btn:hover {
+    /* Vous pouvez ajouter des effets supplémentaires ici */
+  }
+  
+  /* Équipe Section */
+  .team {
+    padding: 4rem 0;
+    background: var(--background-color);
+  }
+  
+  .team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), filter var(--transition-speed);
+    position: relative;
+  }
+  
+  .team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform var(--transition-speed), filter var(--transition-speed);
+  }
+  
+  .team-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .team-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-info p {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+  }
+  
+  .social-icons a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: color var(--transition-speed);
+  }
+  
+  .social-icons a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Effets au Survol sur les Membres de l'Équipe */
+  .team-card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0);
+  }
+  
+  .team-card img {
+    filter: grayscale(100%);
+  }
+  
+  .team-card:hover .social-icons {
+    opacity: 1;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Parallax Section */
+  .parallax {
+    background-image: url('images/parallax-background.jpg'); /* Remplacez par votre image */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .parallax .container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .parallax h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .get-started {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform var(--transition-speed);
+  }
+  
+  .get-started:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Blog Section */
+  .blog {
+    padding: 4rem 0;
+  }
+  
+  .blog h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .blog-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform var(--transition-speed);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity var(--transition-speed);
+  }
+  
+  .blog-content {
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .blog-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-content p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-meta {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+  }
+  
+  .blog-card:hover img {
+    opacity: 0.3;
+  }
+  
+  .blog-card:hover .blog-meta {
+    opacity: 1;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Pricing Section */
+  .pricing {
+    padding: 4rem 0;
+    background: var(--background-color);
+  }
+  
+  .pricing h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed);
+  }
+  
+  .pricing-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .pricing-card .price {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pricing-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .pricing-card .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .pricing-card .btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-info {
+    max-width: 400px;
+  }
+  
+  .footer-info h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: color var(--transition-speed);
+  }
+  
+  .footer-social a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .footer p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Scroll to Top Button */
+  #scrollToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+    transition: background var(--transition-speed);
+    z-index: 1000;
+  }
+  
+  #scrollToTop:hover {
+    background: var(--secondary-color);
+  }
+  
+  #scrollToTop i {
+    font-size: 1.2rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar nav ul {
+      flex-direction: column;
+      background: var(--primary-color);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      display: none;
+    }
+  
+    .navbar nav ul.active {
+      display: flex;
+    }
+  
+    .navbar nav ul li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  
+    .team-members,
+    .blog-articles,
+    .pricing-plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

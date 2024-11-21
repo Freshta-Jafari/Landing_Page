@@ -1,43 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kucra Agency</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page ELAN</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Kucra</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">Client</a>
-            <a href="#">Pricing</a>
-            <a href="#">FAQ</a>
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="social-icons">
-            <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>We are StartUp <br> Creative Kucra Agency</h1>
-            <p>Carefully crafted after analysing the needs of different industries and the design achieves a great balance between purpose & presentation.</p>
-            <div class="subscribe">
-                <input type="email" placeholder="Enter your email">
-                <button>Subscribe</button>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">ELAN</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#team">Équipe</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Bienvenue chez ELAN</h2>
+      <p>Abonnez-vous à notre newsletter</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Entrez votre email" required>
+        <button class="btn subscribe-btn" type="submit">S'abonner</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Équipe Section -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2>Notre Équipe</h2>
+      <div class="team-members">
+        <!-- Membre 1 -->
+        <div class="team-card">
+          <img src="/img_landingPage/person1.png" alt="Membre 1">
+          <div class="team-info">
+            <h3>Nom Prénom</h3>
+            <p>Poste</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-skype"></i></a>
             </div>
+          </div>
         </div>
-        <div class="hero-image">
-            <img src="computer-illustration.png" alt="Computer illustration">
+        <!-- Membre 2 -->
+        <div class="team-card">
+          <img src="/img_landingPage/person2.png" alt="Membre 2">
+          <div class="team-info">
+            <h3>Nom Prénom</h3>
+            <p>Poste</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-skype"></i></a>
+            </div>
+          </div>
         </div>
-    </section>
+        <!-- Ajoutez d'autres membres selon vos besoins -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax">
+    <div class="container">
+      <h2>Découvrez nos services</h2>
+      <button class="btn get-started">Commencer</button>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2>Notre Blog</h2>
+      <div class="blog-articles">
+        <!-- Article 1 -->
+        <div class="blog-card">
+          <img src="/img_landingPage/blog1.png" alt="Article 1">
+          <div class="blog-content">
+            <h3>Titre de l'Article</h3>
+            <p>Aperçu de l'article...</p>
+            <div class="blog-meta">
+              <span>Auteur</span> | <span>Date</span>
+            </div>
+          </div>
+        </div>
+        <!-- Article 2 -->
+        <div class="blog-card">
+          <img src="/img_landingPage/blog2.png" alt="Article 2">
+          <div class="blog-content">
+            <h3>Titre de l'Article</h3>
+            <p>Aperçu de l'article...</p>
+            <div class="blog-meta">
+              <span>Auteur</span> | <span>Date</span>
+            </div>
+          </div>
+        </div>
+        <!-- Ajoutez d'autres articles selon vos besoins -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Nos Tarifs</h2>
+      <div class="pricing-plans">
+        <!-- Plan 1 -->
+        <div class="pricing-card">
+          <h3>Basique</h3>
+          <p class="price">€19/mois</p>
+          <ul>
+            <li>Fonctionnalité 1</li>
+            <li>Fonctionnalité 2</li>
+            <li>Fonctionnalité 3</li>
+          </ul>
+          <button class="btn">Choisir</button>
+        </div>
+        <!-- Plan 2 -->
+        <div class="pricing-card">
+          <h3>Standard</h3>
+          <p class="price">€49/mois</p>
+          <ul>
+            <li>Fonctionnalité 1</li>
+            <li>Fonctionnalité 2</li>
+            <li>Fonctionnalité 3</li>
+          </ul>
+          <button class="btn">Choisir</button>
+        </div>
+        <!-- Plan 3 -->
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <p class="price">€99/mois</p>
+          <ul>
+            <li>Fonctionnalité 1</li>
+            <li>Fonctionnalité 2</li>
+            <li>Fonctionnalité 3</li>
+          </ul>
+          <button class="btn">Choisir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>ELAN</h3>
+          <p>14 rue du Rhône, 67100 STRASBOURG</p>
+          <p>TEL : 03.88.30.78.30</p>
+          <p>www.elan-formation.fr</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-skype"></i></a>
+        </div>
+      </div>
+      <p>&copy; 2024 ELAN. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" type="button" title="Revenir en haut"><i class="fas fa-arrow-up"></i></button>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
